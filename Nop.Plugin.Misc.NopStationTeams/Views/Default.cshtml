@@ -1,0 +1,48 @@
+﻿@using Nop.Web.Framework.Models.DataTables
+@model IList<Nop.Plugin.Misc.NopStationTeams.Models.EmployeeModel>
+
+<link rel="stylesheet" href="~/Plugins/Misc.NopStationTeams/Content/Employee/style.css" />
+<div class="employee-container">
+    @foreach (var employee in Model)
+    {
+        <div class="employee-item">
+            <div class="slider-wrapper theme-custom">
+                <div class="nivoSlider">
+                    @{
+                        var dataSlide1 = new ViewDataDictionary(ViewData)
+                {
+                {"pictureUrl", employee.Picture.ThumbImageUrl},
+                };
+
+                        @await Html.PartialAsync("~/Plugins/Misc.NopStationTeams/Views/_EmployeeInfo.cshtml", dataSlide1)
+                    }
+                </div>
+            </div>
+            <div class="employee-details">
+                <div class="employee-name"><h3>@employee.Name</h3></div>
+                <div class="employee-designation"><p>@employee.Designation</p></div>
+
+                <div class="employee-achivment">
+                    @if (employee.IsMVP)
+                    {
+                        <div class="badge-2" title="nopCommerce MVP">
+                            <img src="https://www.nop-station.com/images/thumbs/0002602_bigbadge_mvp.png" alt="MVP">
+                            <span>nop MVP</span>
+                        </div>
+                    }
+
+                    @if (employee.IsNopCommerceCertified)
+                    {
+                        <div class="badge-2" title="nopCommerce Certified Developer">
+                            <img src="https://www.nop-station.com/images/thumbs/0002603_bigbadge_certifieddev.png" alt="Certified">
+                            <span>Certified</span>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+

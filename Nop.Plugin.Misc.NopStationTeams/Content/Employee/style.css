@@ -1,0 +1,124 @@
+.employee-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.employee-item {
+  width: 211px;
+  max-width: 250px;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+  .employee-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+.slider-wrapper.theme-custom {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .slider-wrapper.theme-custom img {
+    max-width: 100%;
+    height: 63%;
+    object-fit: cover;
+    top: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    /*  filter: grayscale(100%); */
+    transition: all .3s;
+  }
+
+.employee-details {
+  padding: 10px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+  .employee-details div {
+   
+    font-size: 1em;
+    line-height: 1.4;
+    color: #333;
+  }
+
+.employee-name {
+  font-size: 1.4em;
+}
+
+.employee-designation,
+.employee-mvp-status,
+.employee-certification-status {
+  font-size: 1em;
+  color: #666;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+  .badge.active {
+    background-color: #28a745;
+    color: white;
+  }
+
+  .badge.inactive {
+    background-color: #dc3545;
+    color: white;
+  }
+
+.employee-achivment {
+  border-top: 1px solid #e6e9ec;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  font-size: 14px;
+  bottom: 0;
+  width: 100%;
+}
+
+  .employee-achivment .badge-2 {
+    /*border-right: 1px solid #e6e9ec;*/
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+  }
+
+    .employee-achivment .badge-2 img {
+      max-width: 100%;
+      height: auto;
+      margin-right: 5px;
+    }
+
+    .employee-achivment .badge-2 span {
+      font-size: 0.9em;
+      padding-right: 0.5em;
+    }

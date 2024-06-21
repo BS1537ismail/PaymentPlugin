@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "";
+}
+@model Nop.Plugin.Payments.Nagad.Models.PaymentInfoModel
+<table width="100%" cellspacing="2" cellpadding="1" border="0">
+    <tr>
+        <td>
+            <label asp-for="AccountTypes">@T("Payment.SelectAccount"):</label>
+        </td>
+        <td>
+            <select asp-for="AccountType" asp-items="Model.AccountTypes" class="dropdownlists"></select>
+        </td>
+    </tr>
+   
+    <tr>
+        <td>
+            <label asp-for="MobileNumber">@T("Payment.MobileNumber"):</label>
+        </td>
+        <td>
+            <input type="text" asp-for="MobileNumber" style="width:165px;" autocomplete="off" maxlength="22" />
+            <span asp-validation-for="MobileNumber"></span>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label asp-for="TransactionId">@T("Payment.TransactionId"):</label>
+        </td>
+        <td>
+            <input type="text" asp-for="TransactionId" />
+            <span asp-validation-for="TransactionId"></span>
+        </td>
+    </tr>
+</table>

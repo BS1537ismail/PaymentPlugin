@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Payment methods",
+  "FriendlyName": "Nagad Payment",
+  "SystemName": "Payments.Nagad",
+  "Version": "4.70.4",
+  "SupportedVersions": [ "4.70" ],
+  "Author": "nopCommerce team",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Payments.Nagad.dll",
+  "Description": "This plugin enables Nagad Payment (stored into database)"
+}
